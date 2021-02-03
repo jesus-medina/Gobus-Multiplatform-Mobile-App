@@ -1,0 +1,8 @@
+setBinding(new Binding([gradle: this]))
+evaluate(new File(
+        settingsDir.parentFile,
+        'gobus_flutter_module/.android/include_flutter.groovy'
+))
+
+include ':gobus_flutter_module'
+project(':gobus_flutter_module').projectDir = new File('../gobus_flutter_module')
